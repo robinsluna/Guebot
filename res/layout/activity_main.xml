@@ -35,11 +35,18 @@
             android:text="@string/btn_arriba" />
 
         <Button
-            android:id="@+id/button_agarrar"
+            android:id="@+id/button_abrir"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/btn_agarrar" />
+            android:text="@string/btn_abrir" />
+
+        <Button
+            android:id="@+id/button_cerrar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/btn_cerrar" />
 
         <Button
             android:id="@+id/button_abajo"

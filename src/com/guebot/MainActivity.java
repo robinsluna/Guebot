@@ -13,7 +13,8 @@ public class MainActivity extends Activity {
 	ImageView imageView;
 	Button buttonAbajo;
 	Button buttonArriba;
-	Button buttonAgarrar;
+	Button buttonAbrir;
+	Button buttonCerrar;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -22,7 +23,8 @@ public class MainActivity extends Activity {
 		imageView = (ImageView) this.findViewById(R.id.imageView);
 		buttonAbajo = (Button) this.findViewById(R.id.button_abajo);
 		buttonArriba = (Button) this.findViewById(R.id.button_arriba);
-		buttonAgarrar = (Button) this.findViewById(R.id.button_agarrar);
+		buttonAbrir = (Button) this.findViewById(R.id.button_abrir);
+		buttonCerrar = (Button) this.findViewById(R.id.button_cerrar);
 
 		//
 		buttonAbajo.setOnClickListener(new View.OnClickListener() {
@@ -31,7 +33,7 @@ public class MainActivity extends Activity {
 			public void onClick(View v) {
 				new EnviarTask(MainActivity.this, imageView,
 						R.drawable.ic_abajo).execute((Void) null);
-				
+
 			}
 		});
 		buttonArriba.setOnClickListener(new View.OnClickListener() {
@@ -42,7 +44,15 @@ public class MainActivity extends Activity {
 						R.drawable.ic_arriba).execute((Void) null);
 			}
 		});
-		buttonAgarrar.setOnClickListener(new View.OnClickListener() {
+		buttonAbrir.setOnClickListener(new View.OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				new EnviarTask(MainActivity.this, imageView,
+						R.drawable.ic_agarro).execute((Void) null);
+			}
+		});
+		buttonCerrar.setOnClickListener(new View.OnClickListener() {
 
 			@Override
 			public void onClick(View v) {
