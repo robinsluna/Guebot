@@ -6,5 +6,6 @@
     <string name="btn_abajo">ABAJO</string>
     <string name="btn_abrir">ABRIR</string>
     <string name="btn_cerrar">CERRAR</string>
+    <string name="btn_calibrar">CALIBRAR</string>
 
 </resources>

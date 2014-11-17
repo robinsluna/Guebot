@@ -17,8 +17,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:contentDescription="@string/app_name"
-            android:src="@drawable/ic_arriba" />
+            android:contentDescription="@string/app_name" />
     </RelativeLayout>
 
     <LinearLayout
@@ -26,6 +25,13 @@
         android:layout_height="match_parent"
         android:layout_weight="0.8"
         android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/button_calibrar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/btn_calibrar" />
 
         <Button
             android:id="@+id/button_arriba"

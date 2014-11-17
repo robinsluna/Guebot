@@ -25,7 +25,7 @@ public class EnviarTask extends AsyncTask<Void, Void, Void> {
 	protected Void doInBackground(Void... arg0) {
 		try {
 			int i = 0;
-			while (i < 10) {
+			while (i < 2) {
 				i++;
 				Thread.sleep(1000);
 			}

@@ -1,6 +1,7 @@
 package com.guebot;
 
 import android.app.Activity;
+import android.opengl.Visibility;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -15,6 +16,7 @@ public class MainActivity extends Activity {
 	Button buttonArriba;
 	Button buttonAbrir;
 	Button buttonCerrar;
+	Button buttonCalibrar;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +27,13 @@ public class MainActivity extends Activity {
 		buttonArriba = (Button) this.findViewById(R.id.button_arriba);
 		buttonAbrir = (Button) this.findViewById(R.id.button_abrir);
 		buttonCerrar = (Button) this.findViewById(R.id.button_cerrar);
+		buttonCalibrar = (Button) this.findViewById(R.id.button_calibrar);
+
+		buttonAbajo.setVisibility(View.GONE);
+		buttonArriba.setVisibility(View.GONE);
+		buttonAbrir.setVisibility(View.GONE);
+		buttonCerrar.setVisibility(View.GONE);
+		buttonCalibrar.setVisibility(View.VISIBLE);
 
 		//
 		buttonAbajo.setOnClickListener(new View.OnClickListener() {
@@ -57,9 +66,24 @@ public class MainActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 				new EnviarTask(MainActivity.this, imageView,
-						R.drawable.ic_agarro).execute((Void) null);
+						R.drawable.ic_soltar).execute((Void) null);
 			}
 		});
+		//
+		buttonCalibrar.setOnClickListener(new View.OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				new EnviarTask(MainActivity.this, imageView,
+						R.drawable.ic_calibrar).execute((Void) null);
+				buttonAbajo.setVisibility(View.VISIBLE);
+				buttonArriba.setVisibility(View.VISIBLE);
+				buttonAbrir.setVisibility(View.VISIBLE);
+				buttonCerrar.setVisibility(View.VISIBLE);
+				buttonCalibrar.setVisibility(View.GONE);
+			}
+		});
+
 	}
 
 }
