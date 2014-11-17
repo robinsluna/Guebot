@@ -2,6 +2,8 @@
 <resources>
 
     <string name="app_name">Guebot</string>
-    <string name="hello_world">Hello world!</string>
+    <string name="btn_arriba">ARRIBA</string>
+    <string name="btn_abajo">ABAJO</string>
+    <string name="btn_agarrar">AGARRAR</string>
 
 </resources>
